@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: mdbd-api
+  jackson:
+    serialization:
+      indent_output: true
+
+server:
+  port: 8080
+
