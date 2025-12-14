@@ -3,6 +3,7 @@ package com.mdbd.api.dto;
 import com.mdbd.api.model.Moodboard;
 import com.mdbd.api.model.MoodboardItem;
 import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public class MoodboardResponse {
@@ -11,6 +12,7 @@ public class MoodboardResponse {
     private String title;
     private String description;
     private List<MoodboardItem> items;
+    private LocalDate dueDate;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -22,6 +24,7 @@ public class MoodboardResponse {
         this.title = moodboard.getTitle();
         this.description = moodboard.getDescription();
         this.items = moodboard.getItems();
+        this.dueDate = moodboard.getDueDate();
         this.createdAt = moodboard.getCreatedAt();
         this.updatedAt = moodboard.getUpdatedAt();
     }
@@ -48,6 +51,14 @@ public class MoodboardResponse {
 
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 }
 

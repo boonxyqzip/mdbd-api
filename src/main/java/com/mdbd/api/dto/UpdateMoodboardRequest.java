@@ -2,6 +2,7 @@ package com.mdbd.api.dto;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public class UpdateMoodboardRequest {
     @NotBlank(message = "제목을 입력해주세요.")
     private String title;
     private String description;
+    private LocalDate dueDate;
 
     @Valid
     private List<MoodboardItemPayload> items = new ArrayList<>();
@@ -39,6 +41,14 @@ public class UpdateMoodboardRequest {
 
     public void setItems(List<MoodboardItemPayload> items) {
         this.items = items;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 }
 

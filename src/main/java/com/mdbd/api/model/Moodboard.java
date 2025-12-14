@@ -1,6 +1,7 @@
 package com.mdbd.api.model;
 
 import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,7 @@ public class Moodboard {
     private String title;
     private String description;
     private List<MoodboardItem> items = new ArrayList<>();
+    private LocalDate dueDate;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -62,6 +64,14 @@ public class Moodboard {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 }
 

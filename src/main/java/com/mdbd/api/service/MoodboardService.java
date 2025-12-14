@@ -29,6 +29,7 @@ public class MoodboardService {
         moodboard.setId(id);
         moodboard.setTitle(request.getTitle());
         moodboard.setDescription(request.getDescription());
+        moodboard.setDueDate(request.getDueDate());
         moodboard.setItems(mapItems(request.getItems()));
         moodboard.setCreatedAt(now);
         moodboard.setUpdatedAt(now);
@@ -42,6 +43,7 @@ public class MoodboardService {
 
         existing.setTitle(request.getTitle());
         existing.setDescription(request.getDescription());
+        existing.setDueDate(request.getDueDate());
         existing.setItems(mapItems(request.getItems()));
         existing.setUpdatedAt(LocalDateTime.now());
 
